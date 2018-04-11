@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11773,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11853,9 +11856,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Using TensorFlow backend.
@@ -11864,9 +11865,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 133 total dog categories.
@@ -11883,7 +11882,8 @@ There are 836 test dog images.
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11917,9 +11917,7 @@ There are 836 test dog images.
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 13233 total human images.
@@ -11931,7 +11929,8 @@ There are 836 test dog images.
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11988,9 +11987,7 @@ There are 836 test dog images.
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Number of faces detected: 1
@@ -11999,9 +11996,7 @@ There are 836 test dog images.
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -13487,7 +13482,8 @@ TkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13516,7 +13512,8 @@ TkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13566,9 +13563,7 @@ TkSuQmCC
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Percentage of human face in human files is 98
@@ -13581,12 +13576,16 @@ Percentage of human face in dog files is 11
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
 <p><strong>Answer:</strong></p>
+<p>Since in the case of haar cascades algorithm 1st it classifies whether it is face or nonface and then detect 
+the exact faces of a human so in my view it is correct to accept images only with a clear view of a face to 
+detect faces accurately.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -13607,7 +13606,8 @@ Percentage of human face in dog files is 11
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13634,24 +13634,22 @@ Percentage of human face in dog files is 11
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Pre-process-the-Data">Pre-process the Data<a class="anchor-link" href="#Pre-process-the-Data">&#182;</a></h3><p>When using TensorFlow as backend, Keras CNNs require a 4D array (which we'll also refer to as a 4D tensor) as input, with shape</p>
-<p>$$
+$$
 (\text{nb_samples}, \text{rows}, \text{columns}, \text{channels}),
-$$</p>
-<p>where <code>nb_samples</code> corresponds to the total number of images (or samples), and <code>rows</code>, <code>columns</code>, and <code>channels</code> correspond to the number of rows, columns, and channels for each image, respectively.</p>
+$$<p>where <code>nb_samples</code> corresponds to the total number of images (or samples), and <code>rows</code>, <code>columns</code>, and <code>channels</code> correspond to the number of rows, columns, and channels for each image, respectively.</p>
 <p>The <code>path_to_tensor</code> function below takes a string-valued file path to a color image as input and returns a 4D tensor suitable for supplying to a Keras CNN.  The function first loads the image and resizes it to a square image that is $224 \times 224$ pixels.  Next, the image is converted to an array, which is then resized to a 4D tensor.  In this case, since we are working with color images, each image has three channels.  Likewise, since we are processing a single image (or sample), the returned tensor will always have shape</p>
-<p>$$
+$$
 (1, 224, 224, 3).
-$$</p>
-<p>The <code>paths_to_tensor</code> function takes a numpy array of string-valued image paths as input and returns a 4D tensor with shape</p>
-<p>$$
+$$<p>The <code>paths_to_tensor</code> function takes a numpy array of string-valued image paths as input and returns a 4D tensor with shape</p>
+$$
 (\text{nb_samples}, 224, 224, 3).
-$$</p>
-<p>Here, <code>nb_samples</code> is the number of samples, or number of images, in the supplied array of image paths.  It is best to think of <code>nb_samples</code> as the number of 3D tensors (where each 3D tensor corresponds to a different image) in your dataset!</p>
+$$<p>Here, <code>nb_samples</code> is the number of samples, or number of images, in the supplied array of image paths.  It is best to think of <code>nb_samples</code> as the number of 3D tensors (where each 3D tensor corresponds to a different image) in your dataset!</p>
 
 </div>
 </div>
@@ -13682,7 +13680,8 @@ $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13711,7 +13710,8 @@ $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13737,7 +13737,8 @@ $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13782,9 +13783,7 @@ $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Percentage of dog images detected in human_files_short is 2
@@ -13797,7 +13796,8 @@ Percentage of dog images detected in dog_files_short is 100
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13879,9 +13879,7 @@ Percentage of dog images detected in dog_files_short is 100
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████| 6680/6680 [00:53&lt;00:00, 124.88it/s]
@@ -13895,7 +13893,8 @@ Percentage of dog images detected in dog_files_short is 100
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13915,7 +13914,9 @@ Percentage of dog images detected in dog_files_short is 100
 <li>Again added a pooling layer to reduce the dimesion 1/3rd from the previous layer.</li>
 <li>Added 3rd convolution layer with 64 filters and thought it will be enough to get all the pattern in the dog images.</li>
 <li>Added pooling layer to reduce the dimension to 1/3rd from the previous layer.</li>
-<li>Since the above layer capture most of the information in the dog image so now flatten the node the applied fully connected layers with 500 node in the 1st hidden layer and since there are 133 classes in the dog images added 133 node in the final output layer.</li>
+<li><p>Since the above layer capture most of the information in the dog image so now flatten the node the applied fully connected layers with 500 node in the 1st hidden layer and since there are 133 classes in the dog images added 133 node in the final output layer.</p>
+<p>As we know the more we add convolutional layer the more complex comniation of features it recognizes so in the case of dog image classification it is good to start with three convolutional layers and this is the reason I think the below CNN architecture should work.</p>
+</li>
 </ol>
 
 </div>
@@ -13959,9 +13960,7 @@ Percentage of dog images detected in dog_files_short is 100
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -14001,7 +14000,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14022,7 +14022,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14062,9 +14063,7 @@ _________________________________________________________________
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
@@ -14133,9 +14132,7 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[15]:</div>
-
 
 
 
@@ -14149,7 +14146,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14170,7 +14168,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14201,9 +14200,7 @@ Epoch 20/20
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 13.8756%
@@ -14215,7 +14212,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14259,9 +14257,7 @@ Epoch 20/20
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[19]:</div>
-
 
 
 
@@ -14275,7 +14271,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14305,9 +14302,7 @@ Epoch 20/20
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -14329,7 +14324,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14350,7 +14346,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14380,9 +14377,7 @@ _________________________________________________________________
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
@@ -14451,9 +14446,7 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[22]:</div>
-
 
 
 
@@ -14467,7 +14460,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14488,7 +14482,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14519,9 +14514,7 @@ Epoch 20/20
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 45.2153%
@@ -14533,7 +14526,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14562,7 +14556,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14609,7 +14604,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14648,9 +14644,7 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -14672,7 +14666,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14694,7 +14689,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14730,9 +14726,7 @@ _________________________________________________________________
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
@@ -14801,9 +14795,7 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[29]:</div>
-
 
 
 
@@ -14817,7 +14809,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14839,7 +14832,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14872,9 +14866,7 @@ Epoch 20/20
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 80.3828%
@@ -14886,7 +14878,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14931,7 +14924,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14984,7 +14978,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15079,9 +15074,7 @@ The three improvement points would be</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -15091,9 +15084,7 @@ The three improvement points would be</p>
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -17027,9 +17018,7 @@ cjJDn5GRkXGVkxn6jIyMjKuc/wM9/bGfbheh0AAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -17041,9 +17030,7 @@ The dog breed identified is Italian_greyhound
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -19390,9 +19377,7 @@ XvaiQjowAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -19404,9 +19389,7 @@ Error: Neither dog or human is detected
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -21757,9 +21740,7 @@ YII=
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -21771,9 +21752,7 @@ The dog breed identified is Great_dane
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -23462,9 +23441,7 @@ TkSuQmCC
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -23478,9 +23455,7 @@ You look like Irish_terrier
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -25314,9 +25289,7 @@ CwRJU1F8AAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -25328,9 +25301,7 @@ Error: Neither dog or human is detected
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -27627,9 +27598,7 @@ zhP9eZzHeZzHV3icJ/rzOI/zOI+v8Pj/AXLs8o7XoOaiAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -27641,9 +27610,7 @@ The dog breed identified is Chinese_crested
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -28827,9 +28794,7 @@ xovxEY8Xk+rFeDE+4vH/Ae97gtye3VxhAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -28843,9 +28808,7 @@ You look like English_toy_spaniel
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -29854,9 +29817,7 @@ qFGjxjVOzdDXqFGjxjVOzdDXqFGjxjVOzdDXqFGjxjXO/waFriGsa4CPlQAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -29868,9 +29829,7 @@ The dog breed identified is Chinese_crested
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -31202,9 +31161,7 @@ o48++mgD/x/J9xpu9rXk/AAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -31216,9 +31173,7 @@ Error: Neither dog or human is detected
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -33264,9 +33219,7 @@ rkJggg==
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -33277,6 +33230,19 @@ You look like Chinese_crested
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
 </div>
 </div>
 
